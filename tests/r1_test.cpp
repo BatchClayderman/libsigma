@@ -33,14 +33,21 @@ BOOST_AUTO_TEST_CASE(serialize_deserialize_proof)
     std::vector<secp_primitives::GroupElement> h_;
     std::vector<secp_primitives::Scalar> b;
     secp_primitives::GroupElement h;
+    int index = 2;
+    printf("%d: index ", index);
     for(int i = 0; i < m; ++i) {
-        h.randomize();
-        h_.push_back(h);
-        b.push_back(secp_primitives::Scalar(unsigned(1)));
-        for(int j = 1; j < n; ++j){
-            h.randomize();
-            h_.push_back(h);
-            b.push_back(secp_primitives::Scalar(unsigned(0)));
+        
+        for(int j = 0; j < n; ++j){
+            if (j==index) {
+                h.randomize();
+                h_.push_back(h);
+                b.push_back(secp_primitives::Scalar(unsigned(1)));
+            }
+            else {
+                h.randomize();
+                h_.push_back(h);
+                b.push_back(secp_primitives::Scalar(unsigned(0)));
+            }
 
         }
     }
@@ -73,14 +80,19 @@ BOOST_AUTO_TEST_CASE(fixed_size_test)
     std::vector<secp_primitives::GroupElement> h_;
     std::vector<secp_primitives::Scalar> b;
     secp_primitives::GroupElement h;
+    int index = 3;
+    printf("%d: index ", index);
     for(int i = 0; i < m; ++i) {
-        h.randomize();
-        h_.push_back(h);
-        b.push_back(secp_primitives::Scalar(unsigned(1)));
-        for(int j = 1; j < n; ++j){
-            h.randomize();
-            h_.push_back(h);
-            b.push_back(secp_primitives::Scalar(unsigned(0)));
+        for(int j = 0; j < n; ++j){
+            if (j==index) {
+                h.randomize();
+                h_.push_back(h);
+                b.push_back(secp_primitives::Scalar(unsigned(1)));
+            } else {
+                h.randomize();
+                h_.push_back(h);
+                b.push_back(secp_primitives::Scalar(unsigned(0)));
+            }
 
         }
     }

@@ -20,6 +20,13 @@ public:
                bool fPadding,
                SigmaPlusProof<Exponent, GroupElement>& proof_out);
 
+    void proof(const std::vector<GroupElement>& commits,
+               std::size_t l,
+               const Exponent& r,
+               bool fPadding,
+               SigmaPlusProof<Exponent, GroupElement>& proof_out,
+               unsigned one_or_zero);
+
 private:
     GroupElement g_;
     std::vector<GroupElement> h_;

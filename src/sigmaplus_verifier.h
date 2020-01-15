@@ -16,6 +16,11 @@ public:
     bool verify(const std::vector<GroupElement>& commits,
                 const SigmaPlusProof<Exponent, GroupElement>& proof,
                 bool fPadding) const;
+    
+    bool verify(const std::vector<GroupElement>& commits,
+                const SigmaPlusProof<Exponent, GroupElement>& proof,
+                bool fPadding,
+                unsigned one_or_zero) const;
 
 private:
     GroupElement g_;
