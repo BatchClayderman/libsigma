@@ -56,38 +56,34 @@ chmod +x ./run_all_tests
    └── README.mdℤ
 ````
 
-
 The code can be compiled using the following command from the root directory of the repository.
 
 ``./build <directory>``
 
 For example, ``build ~/macos`` will put the executables ``protocol_tests``, ``r1_test``, ``serialize_test``, ``sigma_primitive_types_test``, ``coin_tests``, ``coin_tests`` and ``coin_spend_tests`` in the directory ``~/macos``.
 
-
 ### Group
 
- The elliptic curve group ``secp256k1`` used in Bitcoin.
+It refers to the elliptic curve group ``secp256k1`` is used in Bitcoin.
 
 ### Executables
 
 ### ``protocol_tests``
 
-The executable protocol_tests runs sigma proof generation and verification tests. It creates random anonymity set, puts there there 0, generates proof and tries to verify.
+The executable protocol_tests runs Sigma proof generation and verification tests. It creates a random anonymity set, puts there 0, generates proof, and tries to verify.
     1. one_out_of_n:                        It creates valid proof and verifies.
-    2  prove_and_verify_in_different_set:   Proof is valid but anonymity set is modified.
-    3. prove_coin_out_of_index              The index of coin is out of the set.
+    2  prove_and_verify_in_different_set:   Proof is valid but the anonymity set is modified.
+    3. prove_coin_out_of_index              The index of the coin is out of the set.
     4. prove_coin_not_in_set                Coin at provided index is not 0;
 
 ### ``r1_tests``
 
-The executable r1_tests runs tests for R1 relation. R1
+The executable r1_tests runs tests for the R1 relation. R1
 
 ### ``serialize_test``
 
-The executable serialization_test runs tests for EC Group element, Scalar and Sigma proof. It serializes the object, deserializes it to another object and compares them.
+The executable serialization_test runs tests for EC Group element, Scalar, and Sigma proof. It serializes the object, deserializes it to another object and compares them.
 
 ### ``coin_spend_tests``
 
-The executable coin_spend_tests runs tests for whole schema.
-
-````
+The executable coin_spend_tests runs tests for the whole schema.
