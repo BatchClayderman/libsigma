@@ -60,7 +60,7 @@ The code can be compiled using the following command from the root directory of 
 
 ``./build <directory>``
 
-For example, ``build ~/macos`` will put the executables ``protocol_tests``, ``r1_test``, ``serialize_test``, ``sigma_primitive_types_test``, ``coin_tests``, ``coin_tests`` and ``coin_spend_tests`` in the directory ``~/macos``.
+For example, ``build ~/exe`` will put the executables ``protocol_tests``, ``r1_test``, ``serialize_test``, ``sigma_primitive_types_test``, ``coin_tests``, ``coin_tests``, and ``coin_spend_tests`` in the directory ``~/exe``.
 
 ### Group
 
