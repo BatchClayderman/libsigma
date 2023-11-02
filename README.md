@@ -36,16 +36,16 @@ make install # optional
 ```
 cd ..
 chmod +x ./build
-./build
+./build exe
 chmod +x ./run_all_tests
-./run_all_tests
+./run_all_tests exe
 ```
 
 ## About libsigma
 
 ### Directory layout
 
-````
+```
    .
    ├── src              # Source code for the protocol & schema
    ├── bitcoin          # Slightly modified source code from bitcoin
@@ -54,7 +54,7 @@ chmod +x ./run_all_tests
    ├── build            # Script to build executables in tests (Linux & MacOS)
    ├── run_all_tests    # Script to run all tests together
    └── README.mdℤ
-````
+```
 
 The code can be compiled using the following command from the root directory of the repository.
 
