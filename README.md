@@ -4,6 +4,45 @@
 This repository contains implementations and test suites for 1-out-of-N proofs described in [https://eprint.iacr.org/2015/643.pdf],
 and also  the implementation of the **Zerocoin scheme** implemented through 1-out-of-N Proofs as is described in the paper  [1-out-of-N Proofs  Or How to Leak a Secret and Spend a Coin, Groth & Kohlweiss, https://eprint.iacr.org/2014/764.pdf]
 
+## Config the environment
+
+### Build Boost
+
+```
+# cd your libsigma directory, where bitcoin, secp256k1, src, tests, etc. will show when you run the command ls. 
+sudo apt-get update && apt-get upgrade
+sudo apt-get install build-essential g++ python3-dev autotools-dev libicu-dev libbz2-dev libboost-all-dev
+wget https://boostorg.jfrog.io/artifactory/main/release/1.80.0/source/boost_1_80_0.tar.gz
+tar xvf boost_1_80_0.tar.gz
+cd boost_1_80_0
+./bootstrap.sh --prefix=/usr/
+sudo ./b2 install
+```
+
+### Build  secp256k1
+
+```
+cd secp256k1
+chmod +x ./autogen.sh
+./autogen.sh
+./configure
+make
+make check
+make install # optional
+```
+
+### Build libsigma
+
+```
+cd ..
+chmod +x ./build
+./build
+chmod +x ./run_all_tests
+./run_all_tests
+```
+
+## About libsigma
+
 ### Directory layout
 
 ````
