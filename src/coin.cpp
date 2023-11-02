@@ -336,9 +336,9 @@ Scalar PrivateCoin::serialNumberFromSerializedPublicKey(
     };
 
     // We use secp256k1_ecdh instead of secp256k1_serialize_pubkey to avoid a timing channel.
-    if (1 != secp256k1_ecdh(context, pubkey_hash.data(), pubkey, &one[0],NULL, NULL)) {
-        throw std::runtime_error("Unable to compute public key hash with secp256k1_ecdh.");
-    }
+    // if (1 != secp256k1_ecdh(context, pubkey_hash.data(), pubkey, &one[0],NULL, NULL)) {
+    //    throw std::runtime_error("Unable to compute public key hash with secp256k1_ecdh.");
+    //}
 
 	std::string zpts("PUBLICKEY_TO_SERIALNUMBER");
 	std::vector<unsigned char> pre(zpts.begin(), zpts.end());
