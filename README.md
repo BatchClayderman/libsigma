@@ -7,7 +7,7 @@
 ### Build Boost
 
 ```
-# cd your libsigma directory, where bitcoin, secp256k1, src, tests, etc. will show when you run the command ls. 
+# cd to your libsigma directory, where bitcoin, secp256k1, src, tests, etc. will show when you run the command ls. 
 sudo apt-get update && apt-get upgrade
 sudo apt-get install build-essential g++ python3-dev autotools-dev libicu-dev libbz2-dev libboost-all-dev
 wget https://boostorg.jfrog.io/artifactory/main/release/1.80.0/source/boost_1_80_0.tar.gz
