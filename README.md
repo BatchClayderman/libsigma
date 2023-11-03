@@ -41,7 +41,9 @@ chmod +x ./run_all_tests
 
 ### Test for the time consumption of libsigma with multiple parameters
 
-In this repo, a Python script is constructed to test for the time consumption of libsigma with multiple parameters. 
+In this repo, a Python script named ```protocol_test.py``` is constructed to test for the time consumption of only the ```protocol_tests``` in libsigma with multiple parameters. 
+
+The time consumption of generation and verification will be dumped as a CSV file correspondingly. 
 
 Please modify the cases and the parameters at the beginning of the Python script. Change the related file paths if you wish to. 
 
