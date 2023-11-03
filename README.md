@@ -41,7 +41,7 @@ chmod +x ./run_all_tests
 
 ### Test for the time consumption of libsigma with multiple parameters
 
-In this repo, a Python script named ```protocol_test.py``` is constructed to test for the time consumption of only the ```protocol_tests``` in libsigma with multiple parameters. 
+In this repo, a Python script named ``protocol_test.py`` is constructed to test for the time consumption of only the ``protocol_tests`` in libsigma with multiple parameters. 
 
 The time consumption of generation and verification will be dumped as a CSV file correspondingly. 
 
@@ -66,9 +66,11 @@ The Python script should be placed in the root directory of libsigma. It shall b
 
 The code can be compiled using the following command from the root directory of the repository.
 
-``./build <directory>``
+```./build <directory>```
 
-For example, ``build ~/exe`` will put the executables ``protocol_tests``, ``r1_test``, ``serialize_test``, ``sigma_primitive_types_test``, ``coin_tests``, ``coin_tests``, and ``coin_spend_tests`` in the directory ``~/exe``.
+For example, ``build ~/exe`` will put the executables ``protocol_tests``, ``r1_test``, ``serialize_test``, ``sigma_primitive_types_test``, ``coin_tests``, ``coin_tests``, and ``coin_spend_tests`` in the directory ``~/exe``. 
+
+Please do not include any special characters including spaces in ``<directory>``, especially when you are using ``protocol_test.py``. 
 
 ### Group
 
