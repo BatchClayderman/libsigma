@@ -126,7 +126,7 @@ def doTest(cases, block_dict, parameters = test_parameters, cppFp = cppFilepath,
 		return 0
 	try:
 		with open(outputFp, "w", encoding = encoding) as f:
-			f.write("i,N,n,m,index,Generation (s),Verification (s)\n")
+			f.write("test case,N,n,m,index,Generation (s),Verification (s)\n")
 	except:
 		print("Open file \"{0}\" failed. ".format(outputFp))
 	success_count = 0
