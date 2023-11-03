@@ -39,6 +39,14 @@ chmod +x ./run_all_tests
 ./run_all_tests exe
 ```
 
+### Test for the time consumption of libsigma with multiple parameters
+
+In this repo, a Python script is constructed to test for the time consumption of libsigma with multiple parameters. 
+
+Please modify the cases and the parameters at the beginning of the Python script. Change the related file paths if you wish to. 
+
+The Python script should be placed in the root directory of libsigma. It shall be executed by Python 3. 
+
 ## About libsigma
 
 ### Directory layout
